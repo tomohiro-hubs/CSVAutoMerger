@@ -145,11 +145,11 @@ async function processFiles() {
             }
 
             // Determine columns to extract
-            // 4 onwards (E col) are data
+            // Changed: Start from index 1 (B col) instead of 4, as user data starts from B col
             const columnMapping = []; 
             let renameCount = 0;
 
-            for (let i = 4; i < originalHeaders.length; i++) {
+            for (let i = 1; i < originalHeaders.length; i++) {
                 const oldName = originalHeaders[i];
                 if (!oldName) continue;
 
